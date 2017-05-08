@@ -13,7 +13,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', path: req.url });
+  res.render('index', { title: 'Üdvözöljük', path: req.url });
 });
 
 router.get('/about', function(req, res, next) {
