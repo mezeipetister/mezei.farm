@@ -1,4 +1,5 @@
 var express = require('express');
+var compression = require('compression');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -7,6 +8,9 @@ var bodyParser = require('body-parser');
 var routes = require('./routes');
 
 var app = express();
+
+// Enable gzip compression
+app.use(compression())
 
 // Bruteforce prevention
 var RateLimit = require('express-rate-limit');
