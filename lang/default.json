@@ -1,5 +1,9 @@
 {
-  "title-index": "Üdvözlünk",
-  "title-about": "Rólunk",
-  "title-products": "Termékeink"
+  "title_index": "Üdvözlünk",
+  "title_about": "Rólunk",
+  "title_products": "Termékeink",
+  "footer_company_name": "Gardenova Kereskedelmi és Termelő Kft.",
+  "footer_address": "Cím",
+  "footer_phone": "Telefon",
+  "footer_email": "Email"
 }

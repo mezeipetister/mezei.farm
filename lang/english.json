@@ -1,5 +1,9 @@
 {
-  "title-index": "Welcome",
-  "title-about": "About",
-  "title-products": "Products"
+  "title_index": "Welcome",
+  "title_about": "About",
+  "title_products": "Products",
+  "footer_company_name": "Gardenova Ltd.",
+  "footer_address": "Address",
+  "footer_phone": "Phone",
+  "footer_email": "Email"
 }

@@ -16,15 +16,15 @@ router.use(function(req, res, next) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: req.languageFile["title-index"], path: req.url, text: req.languageFile });
+  res.render('index', { title: req.languageFile["title_index"], path: req.url, text: req.languageFile });
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: req.languageFile["title-about"], path: req.url });
+  res.render('about', { title: req.languageFile["title_about"], path: req.url });
 });
 
 router.get('/products', function(req, res, next) {
-  res.render('products', { title: req.languageFile["products"], path: req.url });
+  res.render('products', { title: req.languageFile["title_products"], path: req.url });
 });
 
 module.exports = router;
