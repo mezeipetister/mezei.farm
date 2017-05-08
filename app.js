@@ -10,7 +10,7 @@ var app = express();
 
 // Bruteforce prevention
 var RateLimit = require('express-rate-limit');
-app.enable('trust proxy'); // only if you're behind a reverse proxy (Heroku, Bluemix, AWS if you use an ELB, custom Nginx setup, etc) 
+app.enable('trust proxy'); // only if you're behind a reverse proxy (Heroku, Bluemix, AWS if you use an ELB, custom Nginx setup, etc)
 var limiter = new RateLimit({
   windowMs: 60*60*1000, // time frame (1 hour)
   max: 1000, // limit each IP requests per windowMs
