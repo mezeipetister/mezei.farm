@@ -1,0 +1,25 @@
+mixin navbar(menuItems)
+  nav.navbar.navbar-default
+    .container
+      .navbar-header
+        button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a(class="navbar-brand" href="/") Mezei Farm
+      div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
+        ul.nav.navbar-nav.navbar-right
+          each item in menuItems
+            if item.href == path
+              li.active
+                a(href=item.href) #{item.name}
+            else
+              li
+                a(href=item.href) #{item.name}
+
++navbar([])
+//- +navbar([
+//-   - {name: 'Termékek', href: '/products'},
+//-   - {name: 'Rólunk', href: '/about'}
+//- ])
