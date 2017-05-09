@@ -5,7 +5,7 @@
 html, body {
   // @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,400,500');
   // font-family: 'Libre Franklin', 'Lucida Grande', 'Helvetica', 'Arial', 'sans-serif';
-  font-family: 'Lucida Grande', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
   -webkit-overflow-scrolling: touch;
   line-height: 1.44em;
 }
@@ -16,8 +16,8 @@ p, p.lead {
     color: #303030;
 }
 
-p { font-weight: 300; }
+p { font-weight: 200; }
 
-p.lead { font-weight: 300; }
+p.lead { font-weight: 200; }
 
 @import 'footer';
