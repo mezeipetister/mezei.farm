@@ -3,14 +3,25 @@ var router = express.Router();
 
 // Managing multiple languages detecting the main browser language
 router.use(function(req, res, next) {
-  var isItHu = req.acceptsLanguages('hu');
-  if(isItHu) {
-    var lang = 'default';
-  } else {
-    var lang = 'english';
+  // var isItHu = req.acceptsLanguages('hu');
+  // if(isItHu) {
+  //   var lang = 'default';
+  // } else {
+  //   var lang = 'english';
+  // }
+
+  // Language selector based on the lang parameter
+  switch (req.query.lang) {
+    case 'en':
+      req.language = 'english';
+      break;
+    default:
+      req.language = 'default';
+      break;
   }
+
   var fs = require('fs');
-  res.locals.text = JSON.parse(fs.readFileSync('lang/' + lang + '.json', 'utf8'));
+  res.locals.text = JSON.parse(fs.readFileSync('lang/' + req.language + '.json', 'utf8'));
   res.locals.path = req.url;
   next();
 });
