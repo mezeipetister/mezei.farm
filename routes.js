@@ -22,7 +22,7 @@ router.use(function(req, res, next) {
 
   var fs = require('fs');
   res.locals.text = JSON.parse(fs.readFileSync('lang/' + req.language + '.json', 'utf8'));
-  res.locals.path = req.url;
+  res.locals.path = req.path;
   next();
 });
 
