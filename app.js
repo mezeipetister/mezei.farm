@@ -12,7 +12,7 @@ var app = express();
 // Enable gzip compression
 app.use(compression())
 
-// Bruteforce prevention
+// Overload prevention
 var RateLimit = require('express-rate-limit');
 app.enable('trust proxy'); // only if you're behind a reverse proxy (Heroku, Bluemix, AWS if you use an ELB, custom Nginx setup, etc)
 var limiter = new RateLimit({
