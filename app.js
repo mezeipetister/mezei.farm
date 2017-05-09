@@ -6,9 +6,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes');
-var sitemap = require('express-sitemap')({
-  url: require('os').hostname()
-});
 
 var app = express();
 
@@ -40,11 +37,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(limiter, routes);
 
 // Generate sitemap
-sitemap.generate4(routes);
 app.get('/sitemap.xml', function(req, res) { // send XML map
+  var sitemap = require('express-sitemap')({
+    url: req.hostname
+  });
+  sitemap.generate4(routes);
   sitemap.XMLtoWeb(res);
-}).get('/robots.txt', function(req, res) { // send TXT map
-  sitemap.TXTtoWeb(res);
 });
 
 // catch 404 and forward to error handler
