@@ -18,8 +18,8 @@ mixin navbar(menuItems)
               li
                 a(href=item.href) #{item.name}
 
-+navbar([])
-//- +navbar([
-//-   - {name: 'Termékek', href: '/products'},
-//-   - {name: 'Rólunk', href: '/about'}
-//- ])
+//- +navbar([])
++navbar([
+  {name: text.nav_menu_products, href: '/products'},
+  {name: text.nav_menu_about, href: '/about'}
+])
