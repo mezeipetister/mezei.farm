@@ -6,11 +6,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes');
+var sitemap = require('express-sitemap')();
 
 var app = express();
 
 // Enable gzip compression
-app.use(compression())
+app.use(compression());
 
 // Overload prevention
 var RateLimit = require('express-rate-limit');
@@ -34,7 +35,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', limiter, routes);
+app.use(limiter, routes);
+
+// Generate sitemap
+sitemap.generate4(routes);
+app.get('/sitemap.xml', function(req, res) { // send XML map
+  sitemap.XMLtoWeb(res);
+}).get('/robots.txt', function(req, res) { // send TXT map
+  sitemap.TXTtoWeb(res);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

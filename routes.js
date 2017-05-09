@@ -32,7 +32,7 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-router.get(['/home','/:language/home'], function(req, res, next) {
+router.get(['/home'], function(req, res, next) {
   // console.log(req.params.language);
   res.render('index', { title: res.locals.text["title_index"] });
 });
