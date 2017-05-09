@@ -12,3 +12,8 @@ p, p.lead {
 p { font-weight: 200; }
 
 p.lead { font-weight: 200; }
+
+/*Footer*/
+footer .language-selector a:last-of-type {
+  margin-left: 15px;
+}
