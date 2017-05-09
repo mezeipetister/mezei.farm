@@ -1,0 +1,22 @@
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap-compass";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+html, body {
+  @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,400,500');
+  font-family: 'Libre Franklin', 'Lucida Grande', 'Helvetica', 'Arial', 'sans-serif';
+  -webkit-overflow-scrolling: touch;
+  line-height: 1.44em;
+}
+
+h1, h2, h3, h4 { font-weight: 300; }
+
+p, p.lead {
+    color: #303030;
+}
+
+p { font-weight: 300; }
+
+p.lead { font-weight: 300; }
+
+@import 'footer';
