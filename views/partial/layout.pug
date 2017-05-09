@@ -8,8 +8,13 @@ html
   head
     title #{title} - Mezei Farm
     meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     base(href='/', target='_self')
+    //- SEO for multi language based on
+    //- http://searchengineland.com/the-ultimate-guide-to-multilingual-and-multiregional-seo-157838
+    link(rel='alternate',href='http://en.mezei.farm' + path, hreflang='en')
+    link(rel='alternate',href='http://mezei.farm' + path, hreflang='hu')
+    link(rel='alternate',href='http://mezei.farm' + path, hreflang='x-default')
     +addStyle('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     +addStyle('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     +addStyle('/stylesheets/style.css')
