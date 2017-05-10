@@ -34,12 +34,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Use the limiter middleware and the routes
 app.use(limiter, routes);
 
 // Generate sitemap
 app.get('/sitemap.xml', function(req, res) { // send XML map
   var sitemap = require('express-sitemap')({
-    url: req.hostname
+    url: req.hostname // rewrite url in sitemap with the current hostname based on the http request.
   });
   sitemap.generate4(routes);
   sitemap.XMLtoWeb(res);
