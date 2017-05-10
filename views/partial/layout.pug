@@ -1,7 +1,8 @@
 mixin addStyle(url)
-  link(rel='stylesheet', href= url media='none' onload="if(media!='all')media='all'")
-  noscript
-    link(rel='stylesheet', href= url)
+  //- link(rel='stylesheet', href= url media='none' onload="if(media!='all')media='all'")
+  link(rel='stylesheet', href= url)
+  //- noscript
+  //-   link(rel='stylesheet', href= url)
 
 doctype html
 html
