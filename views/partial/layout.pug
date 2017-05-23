@@ -24,6 +24,14 @@ html
     //- Cookie Consent message, plugin for EU Cookie Policy/law
     script.
       window.addEventListener("load", function(){window.cookieconsent.initialise({"palette": {"popup": {"background": "#64386b","text": "#ffcdfd"},"button": {"background": "transparent","text": "#f8a8ff","border": "#f8a8ff"}},"content": {"message": "#{text.cookie_message}","dismiss": "#{text.cookie_dismiss}"},"showLink": false})});
+    script.
+      <!--Start of Zendesk Chat Script-->
+      window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+      d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+      _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+      $.src="https://v2.zopim.com/?4pavZrxTL1vXoKI7wDdYQWelYeVu6Ffv";z.t=+new Date;$.
+      type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+      <!--End of Zendesk Chat Script-->
   body
     include navbar
     block content
