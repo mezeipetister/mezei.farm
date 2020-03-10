@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-SITEMAP: http://mezei.farm/sitemap.xml
